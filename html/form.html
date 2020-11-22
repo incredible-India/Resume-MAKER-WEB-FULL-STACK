@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make My Resume</title>
+    <link rel="stylesheet" href="/../css/form.css">
+    <link rel="shortcut icon" href="./icons/Blackvariant-Shadow135-System-PhotoBooth.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1 class="myheading" >Make my <span class="badge badge-warning">Resume</span></h1>
+    <nav class="navbar navbar-light bg-light">
+        <form class="form-inline">
+          <button class="btn btn-outline-success" type="button" style="margin: 5px 5px;" onclick="location.href=`/`">Home </button>
+          <button class="btn btn-sm btn-outline-secondary" type="button" onclick="location.href='/routes/search/data'">Search </button>
+        </form>
+      </nav>
+    <!-- <div class="alert alert-danger" role="alert" style="display: none;">
+        Please fill the requested filds...
+      </div> -->
+
+
+      <form  action="/routes/uploadingData" method="POST"  class="needs-validation" novalidate enctype="multipart/form-data">
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="validationCustom01">First name</label>
+            <input type="text" class="form-control" id="validationCustom01"  required name="fname">
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="validationCustom02">Last name</label>
+            <input type="text" class="form-control" id="validationCustom02"  required name="lname">
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="validationCustom01">Father`s name</label>
+            <input type="text" class="form-control" id="validationCustom01"  required name="fathername">
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="validationCustom02">Education Details</label>
+            <input type="text" class="form-control" id="validationCustom02"  required name="education">
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="validationTextarea">Address</label>
+            <textarea class="form-control " id="validationTextarea" placeholder="Required Address" required name="address"></textarea>
+            <div class="invalid-feedback">
+                Please fill the address
+              </div>
+          </div>
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="validationCustom03">City</label>
+            <input type="text" class="form-control" id="validationCustom03" required name="city">
+            <div class="invalid-feedback">
+              Please provide a valid city.
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="validationCustom04">State</label>
+            <select class="custom-select" id="validationCustom04" required name="state">
+              <option   disabled >Choose...</option>
+              <option value="Andhra Pradesh">Andhra Pradesh</option>
+              <option value="Assam">Assam</option>
+              <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+              <option value="Bihar">Bihar</option>
+              <option value="Chhattisgarh">Chhattisgarh</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Goa">Goa</option>
+              <option value="Gujarat">Gujarat</option>
+              <option value=" Jammu and Kashmir"> Jammu and Kashmir</option>
+              <option value="Jharkhand"> Jharkhand</option>
+              <option value="West Bengal">West Bengal</option>
+              <option value=" Karnataka"> Karnataka</option>
+              <option value="Kerala"> Kerala</option>
+              <option value="Madhya Pradesh">Madhya Pradesh</option>
+              <option value="Maharashtra">Maharashtra</option>
+              <option value="Manipur">Manipur</option>
+              <option value="Meghalaya">Meghalaya</option>
+              <option value="Mizoram">Mizoram</option>
+              <option value="Nagaland">Nagaland</option>
+              <option value="Orissa">Orissa</option>
+              <option value="Punjab">Punjab</option>
+              <option value="Rajasthan">Rajasthan</option>
+              <option value="Sikkim">Sikkim</option>
+              <option value="Tamil Nadu">Tamil Nadu</option>
+              <option value="Tripura">Tripura</option>
+              <option value="Uttaranchal">Uttaranchal</option>
+              <option value="Uttar Pradesh">Uttar Pradesh</option>
+              <option value="Haryana">Haryana</option>
+              <option value="Himachal Pradesh">Himachal Pradesh</option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid state.
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="validationCustom05">Zip</label>
+            <input type="text" class="form-control" id="validationCustom05" required name="zip">
+            <div class="invalid-feedback">
+              Please provide a valid zip.
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <label for="validationCustom03">Email</label>
+              <input type="email" class="form-control" id="validationCustom03" required name="email">
+              <div class="invalid-feedback">
+                Please provide a valid Email.
+              </div>
+            </div>
+    
+        <div class="col-md-3 mb-3">
+            <label for="validationCustom05">Date Of Birth</label>
+            <input type='date' class="form-control" id="validationCustom05" required name="dob">
+            <div class="invalid-feedback">
+              Please provide a D.O.B.
+            </div>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="validationTextarea">Skills</label>
+            <textarea class="form-control " id="validationTextarea" placeholder="Required your skills" required name="skills"></textarea>
+            <div class="invalid-feedback">
+                Please provide a valid Address.
+              </div>
+          </div>
+          <!-- <div class="custom-file">
+            <input type="file" class="custom-file-input" id="customFile">
+            <label class="custom-file-label" for="customFile">Choose file</label>
+            <div class="invalid-feedback">Example invalid custom file </div>
+          </div> -->
+          <div class="custom-file mb-3">
+              <label class="custom-file-label" for="validatedCustomFile">Choose image (name cannot be seen due to security)</label>
+            <input type="file" class="custom-file-input" id="validatedCustomFile" required   name='image'>
+            <div class="invalid-feedback">Image invalid custom file </div>
+          </div>
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">
+              I Agree That All Informations are correct..
+            </label>
+            <div class="invalid-feedback">
+              You must agree before submitting.
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit form</button>
+        <button class="btn btn-warning" type="reset">Reset</button>
+      </form>
+      
+      <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+          
+                event.preventDefault();
+                event.stopPropagation();
+               
+              }
+              
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+      </script>
+<script>
+  if(document.getElementById('validationCustom04').value=='none')
+  {
+    document.getElementsByTagName('form')[1].addEventListener('submit',(event)=>{
+      event.preventDefault()
+      alert("please Select the state name")
+    })
+  }
+</script>
+
+
+</body>
+
+</html>

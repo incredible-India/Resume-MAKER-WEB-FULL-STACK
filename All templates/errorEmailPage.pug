@@ -1,0 +1,13 @@
+extends ./base.pug
+
+block style
+    style
+        include ./../css/error.css
+block content
+    div.sisu
+        h1 #{err}
+        div.kio
+            button.btn.btn-danger(onclick='history.go(-1)') Go Back 
+            button.btn.btn-success(onclick='location.href="/"') Home
+            button.btn.btn-primary(onclick='/routes/search/data') Search
+            //- button.btn.btn-warning(onclick='history.go(-1)') Update

@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+@font-face {
+    font-family: font;
+    src: url(./../fonts/font.ttf);
+}
+@font-face {
+    font-family: fonts;
+    src: url(./../fonts/fonts.ttf);
+}
+.myheading{
+    font-family: fonts;
+margin-left: 20px;
+margin-top: 10px;
+/* text-shadow: 2px 2px 1px; */
+}
+.badge{
+    font-family: font;
+}
+footer{
+    width: 100%;
+    margin: auto;
+    /* position: sticky; */
+    background-color: darkgray;
+  
+    bottom: 0px;
+
+    box-shadow: 0 0 5px,0 0 10px;
+}
+.info{
+    font-family: font;
+    text-decoration: underline;
+    margin: 10px 10px;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+justify-content: space-around;
+    /* box-shadow: 0 05px,0 0 10px; */
+    
+}
+
+.lola{
+    margin: 30px 20px;
+    padding: 10px;
+
+    border: 1px solid gray;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

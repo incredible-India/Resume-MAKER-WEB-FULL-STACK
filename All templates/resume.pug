@@ -1,0 +1,87 @@
+extends ./base.pug
+
+block style
+
+    style
+        include ./../css/resume.css
+block title
+    title Resumes
+
+block link
+    link(rel="shortcut icon", href="/icons/riya.ico", type="image/x-icon")
+    
+
+
+block content
+    - var imagelinks = urlimage
+    
+    div.fix
+        a.link(href="/")
+            h1.myhead Make My
+                span.badge.badge-info Resume
+        
+
+    div.main
+        div.con 
+            div.card.mb-3.bg-light(style='max-width: 540px;')
+                div.row.no-gutters
+                    div.col-md-4
+
+                        
+                        
+                        //- /UserImage/1602871483916julius-drost-C8wlYF8ubBo-unsplash (1).jpg
+                        img.card-img(src= '/UserImage/' + imagelinks  alt='Image of users'  height="200px" )
+                        
+                    div.col-md-8
+                        div.card-body
+                            h5.card-title #{name}
+                            p.card-text
+                                | #{skills}
+                                h5  #{email}
+            p.card-text
+            small.text-muted Last updated 3 mins ago
+        div.tain
+
+            ul.list-group
+                li.list-group-item Name
+                li.list-group-item.list-group-item-info #{name}
+                li.list-group-item.list-group-item-light Father`s Name
+                li.list-group-item.list-group-item-info #{fathername}
+                li.list-group-item.list-group-item-light Date Of Birth
+                li.list-group-item.list-group-item-info #{dob}  
+                li.list-group-item.list-group-item-light Email
+                li.list-group-item.list-group-item-info #{email}
+                li.list-group-item.list-group-item-light Education Detail
+                li.list-group-item.list-group-item-info #{education}
+                li.list-group-item.list-group-item-light Skills Detail
+                li.list-group-item.list-group-item-success #{skills}
+                li.list-group-item.list-group-item-light Address
+                li.list-group-item.list-group-item-info #{address}
+                li.list-group-item.list-group-item-light State 
+                li.list-group-item.list-group-item-info #{state}
+                li.list-group-item.list-group-item-light City
+                li.list-group-item.list-group-item-info #{city}
+                li.list-group-item.list-group-item-light Zip
+                li.list-group-item.list-group-item-info #{zip}
+
+                -var link =email
+                -var fname =name
+                a.islink(href="/resumemaking")
+
+                    button.btn.btn-outline-primary.btn-lg.btn-block(type='button') Create New
+
+                a.islink(href="/routes/search/data")
+                    button.btn.btn-outline-secondary.btn-lg.btn-block(type='button') Search
+                
+                a.islink(href='/routes/update/' + email)
+        
+                    button.btn.btn-outline-success.btn-lg.btn-block(type='button') Update
+
+                a.islink(href='/routes/' + email + '/' + fname + '/deletemyresume/' +  imagelinks  )
+
+                    button.btn.btn-outline-danger.btn-lg.btn-block(type='button' ) Delete
+              
+    h6  All informatons are stored in database
+             
+
+    

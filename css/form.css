@@ -1,0 +1,29 @@
+@font-face {
+    font-family: font;
+    src: url(./../fonts/font.ttf);
+}
+@font-face {
+    font-family: fonts;
+    src: url(./../fonts/fonts.ttf);
+}
+.myheading{
+    font-family: fonts;
+margin-left: 20px;
+margin-top: 10px;
+/* text-shadow: 2px 2px 1px; */
+}
+.badge{
+    font-family: font;
+}
+
+nav{
+  margin: 10px;  
+}
+
+form{
+    margin: 20px 20px;
+}
+
+#give{
+    margin-left: 10px;
+}

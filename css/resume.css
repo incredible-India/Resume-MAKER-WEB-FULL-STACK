@@ -1,0 +1,83 @@
+/* .main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    width: 800px;
+    height: 800px;
+}
+.first{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 2px solid  rgb(138, 119, 119);
+    width: 800px;
+    height: 300px;
+}
+.name{
+    width:400px;
+height: 150px;
+border: 1px solid red;
+}
+.img{
+    width:400px;
+height: 150px;
+border: 1px solid red;
+}
+ */
+ @font-face {
+    font-family: font;
+    src: url(/fonts/font.ttf);
+}
+@font-face {
+    font-family: fonts;
+    src: url(/fonts/fonts.ttf);
+}
+
+.myhead{
+    text-align: center;
+  
+    font-family: fonts;
+margin-left: 20px;
+margin-top: 10px;
+padding: 10px;
+/* text-shadow: 2px 2px 1px; */
+}
+.badge{
+    font-family: font;
+    margin-left: 5px;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+button{
+    margin-top: 6px;
+    margin-bottom: 12px;
+}
+.con{
+    width:1300px;
+}
+.tain{
+    width:1300px;
+}
+
+.link{
+    color: black;
+}
+
+.islink:hover{
+    text-decoration: none;
+    /* color: blue; */
+    
+}
+
+
+h6{
+    text-align: center;
+    background-color: gray;
+}

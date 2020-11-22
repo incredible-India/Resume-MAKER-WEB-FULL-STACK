@@ -1,0 +1,24 @@
+@font-face {
+    font-family: font;
+    src: url(./../fonts/font.ttf);
+}
+@font-face {
+    font-family: fonts;
+    src: url(./../fonts/fonts.ttf);
+}
+
+.myhead{
+    margin: 6px 10px;
+    padding: 5px 5px;
+    font-family: fonts;
+    /* text-shadow: 2px 2px 1px; */
+
+}
+.badge-info{
+    margin-left: 5px;
+    font-family: font;
+}
+
+hr {
+    box-shadow: 0 0 10px;
+}

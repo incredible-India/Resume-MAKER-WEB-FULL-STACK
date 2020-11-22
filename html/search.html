@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Resume</title>
+    <link rel="stylesheet" href="./../css/search.css">
+    <link rel="shortcut icon" href="./../icons/search.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="alert alert-danger" role="alert" id="aler" style="display: none;">
+        Please Fill the Email or Name..
+      </div>
+
+    <h1 class="myheading" >Make my <span class="badge badge-danger">Resume</span></h1>
+
+    <ul class="nav justify-content-center navbar navbar-dark bg-dark">
+        <li class="nav-item">
+          <a class="nav-link active" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/resumemaking">Creat New</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/routes/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Search</a>
+        </li>
+      </ul>
+
+      <form action="/routes/find/data" method="POST">
+        <div class="form-row align-items-center">
+          <div class="col-auto my-1" >
+            <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" style="margin-bottom: 8px;" name="select">
+              <!-- <option selected>Choose...</option> -->
+              <option value="Email">Email</option>
+              <option value="Name">First Name</option>
+              <option value="City">City</option>
+              <option value="All">All</option>
+            </select>
+          </div>
+          <div class="col-auto my-1">
+            <div class="form-group mx-sm-3 mb-2">
+                <label for="inputPassword2" class="sr-only">Enter Data</label>
+                <input type="text" class="form-control" id="inputPassword2" placeholder="Enter Data" name="data">
+              </div>
+          </div>
+          <div class="col-auto my-1">
+            <button type="submit" class="btn btn-primary" style="margin-bottom: 9px;" id="submit">Get Resume</button>
+          </div>
+        </div>
+      </form>
+
+      <div class="qute">
+        <div class="card">
+            <div class="card-header bg-info">
+             Thaught
+            </div>
+            <div class="card-body">
+              <blockquote class="blockquote mb-0">
+                <p >You only live once, but if you do it right, once is enough.</p>
+                <footer class="blockquote-footer">Himanshu Sharma <cite title="Source Title">A.I</cite></footer>
+              </blockquote>
+            </div>
+          </div>
+      </div>
+
+<div class="img" style="margin: 25px;">
+    <div class="card bg-dark text-white">
+        <img src="./../pics for web/daoud-abismail-KMH3OGWO8Wc-unsplash.jpg" class="card-img" alt="Beautiful pic" height="700px">
+        <div class="card-img-overlay">
+          <h3 class="card-title">Resume <span class="badge badge-danger">Maker</span></h3>
+          <p class="card-text">This Resume maker provide you a awesome plateform to make your resume in very simple and easy way..</p>
+          <p class="card-text">An open source Project</p>
+        </div>
+      </div>
+</div>
+
+<div class="about">
+    All Copy-right Are reserved
+</div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script>
+    const aler =document.getElementById('aler')
+    const input =document.getElementById('inputPassword2')
+    const submit =document.getElementById('submit')
+
+    submit.addEventListener("click",(event)=>{
+        if(input.value=="" && document.getElementById('inlineFormCustomSelect').value != 'All')
+        {
+            event.preventDefault()
+            aler.style.display='block'
+                
+        }
+    })
+   input.addEventListener('click',()=>{ 
+    aler.style.display='none'
+})
+    
+</script>
+</html>

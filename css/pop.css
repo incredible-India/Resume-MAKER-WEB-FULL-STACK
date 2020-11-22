@@ -1,0 +1,29 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    background: #222;
+  }
+  
+  .module-border-wrap {
+    max-width:750px;
+    padding: 1rem;
+    position: relative;
+    background: linear-gradient(to right, red, purple);
+    padding: 3px;
+  }
+  
+  .module {
+    background: #222;
+    color: white;
+    padding: 2rem;
+  }
+  button{
+      width: 100px;
+      margin: 5px 8px;
+  }
+
+  a:hover{
+      text-decoration: none;
+  }

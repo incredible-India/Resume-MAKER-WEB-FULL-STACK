@@ -1,0 +1,14 @@
+extends base.pug
+
+block title
+    title #{title}
+
+block style
+    style
+        include ./../css/form.css
+
+block content
+    //- <h1 class="myheading" >Make my <span class="badge badge-success">Resume</span></h1>
+    h1.myhead Make My
+        span.badge.badge-info Resume
+    hr

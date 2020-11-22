@@ -1,0 +1,51 @@
+extends  ./base.pug
+
+block title
+    title MakeMyResume
+
+block link
+    link(rel="shortcut icon", href="./../icons/data.ico", type="image/x-icon")
+block style 
+    style
+        include ./../css/show.css
+
+block content
+    h1.myheading
+        a(name='top')
+            | Make my 
+        span.badge.badge-dark Resume
+    ul.nav.justify-content-center.navbar.navbar-dark.bg-dark
+        li.nav-item
+            a.nav-link.active(href='/') Home
+        li.nav-item
+            a.nav-link(href='/resumemaking') Creat New
+        li.nav-item
+            a.nav-link(href='/routes/search/data') Search
+        li.nav-item
+            a.nav-link.disabled(href='#' tabindex='-1' aria-disabled='true') Pricing
+
+    -var array =result
+
+    .contain
+     each val in array
+       
+        .const
+             
+            .card(style='width: 18rem;')
+                img.card-img-top(src='data:image/jpg; base64,' + val.img.data.toString('base64')  alt=val.fname + 'image' height='300px' width= "250px" )
+                .card-body
+                    h5.card-title #{val.fname +" " + val.lname}
+                    p.card-text
+                        | #{val.skills}
+                    h6 #{val.email}
+                    a.btn.btn-primary(href='/routes/showdata/' + val.email + '/' + val.imgpath +'/') Get Details 
+
+    hr
+
+    a.btn.btn-secondary(href='#top') Top
+    a.btn.btn-primary(href='/resumemaking') Create New
+    
+    .about All Copy-right are reserved
+
+    
+        

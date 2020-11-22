@@ -1,0 +1,28 @@
+extends ./base.pug
+
+block style
+    style   
+        include ./../css/pop.css
+
+
+block content
+    -var link_one =jsonlink
+    -var link_two=jsonlinktwo
+
+    .module-border-wrap
+        .module
+            h1 #{message}
+            .button
+                a(href= link_one)
+
+                    button.btn.btn-danger(type='button') #{btn_one} 
+                if  link_two
+
+                    a(href= link_two)
+                         button.btn.btn-success(type='button') #{btn_two}
+                else
+                     button.btn.btn-success(type='button' onclick='history.go(-1)')  #{btn_two}
+
+block script
+    script
+        include ./../javascript/yesno.js

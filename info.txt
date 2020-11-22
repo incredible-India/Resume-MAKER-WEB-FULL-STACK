@@ -1,0 +1,9 @@
+in this project in resume.pug file ,the image of users is taken from file location in system not from the database...
+for the contribution it can be done...
+ we can set that pic source from the database
+ using  <img scr='data: image/jpg;base64,img.data.toString('base64'}'>
+ and also we can add some security page like updating resume or show all resume we should ask for the password
+
+
+i made the backupfile and delete the data from the database 
+before useing this app please restore all the data from backup file (mongorestore)

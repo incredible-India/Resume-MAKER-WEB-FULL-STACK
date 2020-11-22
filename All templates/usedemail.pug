@@ -1,0 +1,29 @@
+extends ./base.pug
+
+block style
+    style   
+        include ./../css/pop.css
+
+
+block content
+    -var linkOne=linkone
+    -var btnOne =btnone
+
+    
+
+    .module-border-wrap
+        .module
+            h1 #{message}
+            .button
+                a(href= linkOne)
+
+                    button.btn.btn-danger(type='button') #{btnOne} 
+              
+
+                    
+                
+                button.btn.btn-success(type='button' onclick='history.go(-2)')  Go Back
+
+block script
+    script
+        include ./../javascript/yesno.js

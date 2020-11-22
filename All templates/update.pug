@@ -1,0 +1,150 @@
+-var fname =fname
+-var lname =lname
+-var fathername =fathername
+-var education =education
+-var address =address
+-var city =city
+-var state =state
+-var zip =zip
+-var dob=dob
+-var skills=skills
+-var email=email
+
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Make My Resume
+  style 
+    include ./../css/form.css
+
+  link(rel='shortcut icon' href='./icons/Blackvariant-Shadow135-System-PhotoBooth.ico' type='image/x-icon')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' integrity='sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z' crossorigin='anonymous')
+  script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js' integrity='sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj' crossorigin='anonymous')
+  script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js' integrity='sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN' crossorigin='anonymous')
+  script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js' integrity='sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV' crossorigin='anonymous')
+h1.myheading
+  | Make my 
+  span.badge.badge-warning Resume
+nav.navbar.navbar-light.bg-light
+  form.form-inline
+    button.btn.btn-outline-success(type='button' style='margin: 5px 5px;' onclick='location.href=`/`') Home 
+    button.btn.btn-sm.btn-outline-secondary(type='button' onclick='location.href=`/resumemaking`') Create New 
+//
+  <div class="alert alert-danger" role="alert" style="display: none;">
+  Please fill the requested filds...
+  </div>
+form.needs-validation(action='/routes/updatingData/'+email +'/confirmation' method='POST' novalidate='' enctype='multipart/form-data')
+  .form-row
+    .col-md-6.mb-3
+      label(for='validationCustom01') First name
+      input#validationCustom01.form-control(type='text' required='' name='fname' value=fname)
+      .valid-feedback
+        | Looks good!
+    .col-md-6.mb-3
+      label(for='validationCustom02') Last name
+      input#validationCustom02.form-control(type='text' required='' name='lname' value=lname)
+      .valid-feedback
+        | Looks good!
+  .form-row
+    .col-md-6.mb-3
+      label(for='validationCustom01') Father&grave;s name
+      input#validationCustom01.form-control(type='text' required='' name='fathername' value=fathername)
+      .valid-feedback
+        | Looks good!
+    .col-md-6.mb-3
+      label(for='validationCustom02') Education Details
+      input#validationCustom02.form-control(type='text' required='' name='education' value=education)
+      .valid-feedback
+        | Looks good!
+  .mb-3
+    label(for='validationTextarea') Address
+    textarea#validationTextarea.form-control(placeholder='Required Address' required='' name='address' ) #{address}
+    .invalid-feedback
+      | Please provide a valid Address.
+  .form-row
+    .col-md-6.mb-3
+      label(for='validationCustom03') City
+      input#validationCustom03.form-control(type='text' required='' name='city' value=city)
+      .invalid-feedback
+        | Please provide a valid city.
+    .col-md-3.mb-3
+      label(for='validationCustom04') State
+      select#validationCustom04.custom-select(required='' name='state' )
+        option(value=state selected) #{state}
+        option(disabled='') Choose...
+        option(value='Andhra Pradesh') Andhra Pradesh
+        option(value='Assam') Assam
+        option(value='Arunachal Pradesh') Arunachal Pradesh
+        option(value='Bihar') Bihar
+        option(value='Chhattisgarh') Chhattisgarh
+        option(value='Delhi') Delhi
+        option(value='Goa') Goa
+        option(value='Gujarat') Gujarat
+        option(value=' Jammu and Kashmir')  Jammu and Kashmir
+        option(value='Jharkhand')  Jharkhand
+        option(value='West Bengal') West Bengal
+        option(value=' Karnataka')  Karnataka
+        option(value='Kerala')  Kerala
+        option(value='Madhya Pradesh') Madhya Pradesh
+        option(value='Maharashtra') Maharashtra
+        option(value='Manipur') Manipur
+        option(value='Meghalaya') Meghalaya
+        option(value='Mizoram') Mizoram
+        option(value='Nagaland') Nagaland
+        option(value='Orissa') Orissa
+        option(value='Punjab') Punjab
+        option(value='Rajasthan') Rajasthan
+        option(value='Sikkim') Sikkim
+        option(value='Tamil Nadu') Tamil Nadu
+        option(value='Tripura') Tripura
+        option(value='Uttaranchal') Uttaranchal
+        option(value='Uttar Pradesh') Uttar Pradesh
+        option(value='Haryana') Haryana
+        option(value='Himachal Pradesh') Himachal Pradesh
+      .invalid-feedback
+        | Please select a valid state.
+    .col-md-3.mb-3
+      label(for='validationCustom05') Zip
+      input#validationCustom05.form-control(type='text' required='' name='zip' value=zip)
+      .invalid-feedback
+        | Please provide a valid zip.
+  .form-row
+    .col-md-6.mb-3
+      label(for='validationCustom03') Email
+      input#validationCustom03.form-control(type='email' required='' name='email' value=email)
+      .invalid-feedback
+        | Please provide a valid Email.
+    .col-md-3.mb-3
+      label(for='validationCustom05') Date Of Birth
+      input#validationCustom05.form-control(type='date' required='' name='dob' value=dob)
+      .invalid-feedback
+        | Please provide a D.O.B.
+  .mb-3
+    label(for='validationTextarea') Skills
+    textarea#validationTextarea.form-control(placeholder='Required your skills' required='' name='skills') #{skills}
+    .invalid-feedback
+      | Please provide a valid Address.
+  
+  //- .custom-file
+  //-   input.custom-file-input#customFile(type="file" )
+  //-   label.custom-file-label(for="customFile")Choose file
+  //-   <div class="invalid-feedback">Example invalid custom file </div>
+  //-   </div>
+  .custom-file.mb-3
+    label.custom-file-label(for='validatedCustomFile') Choose image (name cannot be seen due to security)
+    input#validatedCustomFile.custom-file-input(type='file' required='' name='image' )
+    .invalid-feedback Image invalid custom file 
+  .form-group
+    .form-check
+      input#invalidCheck.form-check-input(type='checkbox' value='' required='')
+      label.form-check-label(for='invalidCheck')
+        | I Agree That All Informations are correct..
+      .invalid-feedback
+        | You must agree before submitting.
+  button.btn.btn-primary(type='submit') Update 
+  button#give.btn.btn-warning(type='button' onclick='history.go(-1)' ) Back
+
+
+script
+    include ./../javascript/update.js

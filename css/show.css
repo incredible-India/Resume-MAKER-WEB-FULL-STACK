@@ -1,0 +1,31 @@
+.contain{
+    margin: 15px 15px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+ align-items: center;
+
+    
+
+}
+.const{
+    padding: 15px;
+}
+.const :hover
+{
+    box-shadow: 0 0 15px;
+}
+
+.myheading{
+    margin: 10px 9px;
+}
+
+.about{
+    text-align: center;
+}
+
+.btn-secondary{
+    margin: 8px 9px;
+}
